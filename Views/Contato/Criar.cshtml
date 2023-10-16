@@ -1,0 +1,31 @@
+
+@{
+    ViewData["Title"] = "Lista contato";
+}
+<div class="text-center">
+    <h1 class="display-4">Bem vindo</h1>
+    <p class="h5">Adicionar exportação</p>
+</div>
+<div>
+
+</div>
+@model Cadastro
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Registro)
+    @Html.TextBoxFor(model => model.Registro)
+    <br />
+    @Html.LabelFor(model => model.Data)
+    @Html.TextBoxFor(model => model.Data)
+    <br />
+    @Html.LabelFor(model => model.Volume)
+    @Html.TextBoxFor(model => model.Volume)
+    <br />
+    @Html.LabelFor(model => model.Valor)
+    @Html.TextBoxFor(model => model.Valor)
+    <br/>
+    <input type="submit" value="Cadastrar">
+}
+<div class="btn-group d-grid gap-2" role="group" aria-label="Basic mixed styles example">
+    <a role="button" asp-controller="Cadastro" asp-action="Adicionar" class="btn btn-success">Adicionar</a>
+</div>

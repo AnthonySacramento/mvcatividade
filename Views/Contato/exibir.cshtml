@@ -1,0 +1,51 @@
+@{
+    ViewData["Title"] = "Lista Contato";
+}
+<div class="text-center">
+    <h1 class="display-4">Bem vindo</h1>
+    <p class="h5">Lista de contatos</p>
+</div>
+<div class="d-grid gap-2 d-md-block">
+<a role="button" asp-controller="Contato" asp-action="Criar" class="btn btn-success">+ Adicionar Contato</a>
+</div>
+<div class="text-center">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Registro</th>
+                <th scope="col">Data</th>
+                <th scope="col">Volume</th>
+                <th scope="col">valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>RE: 021.889858</td>
+                <td>24/12/2023</td>
+                <td>2.000 litro</td>
+                <td>$ 2.0000 reais</td>
+                <td>
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <a role="button" asp-controller="Contato" asp-action="Editar" class="btn btn-primary">Editar</a>
+                        <a role="button" asp-controller="Contato" asp-action="ConfirmarDeletar" class="btn btn-danger">Remover</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>RE: 023.877789</td>
+                <td>02/05/2022</td>
+                <td>10.000 litros</td>
+                <td>$ 500.000</td>
+                  <td>
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <a role="button" asp-controller="Contato" asp-action="Editar" class="btn btn-primary">Editar</a>
+                        <a role="button" asp-controller="Contato" asp-action="ConfirmarDeletar" class="btn btn-danger">Remover</a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
